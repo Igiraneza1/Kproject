@@ -1,33 +1,47 @@
-import React from "react";
-import "../styles/navbar.css";
-import icon from '../assets/imag-7.jpg'
-import search_b from '../assets/search-b.png'
-import search_w from '../assets/search-w.png'
-import day from '../assets/day.png'
-import night from '../assets/night.png'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react"; 
 
+const Navbar = () => {
+    
+  const [isOpen, setIsOpen] = useState(false);
 
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-red-400 shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          
+          <Link to="/" className="text-xl font-bold text-gray-900">Blood Donation</Link>
 
-    function Navbar(){
-    return(
-        <div className="container">
-            
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
-                <button><li>Register Now</li> </button>
-            </ul>
-            <div className="search-box">
-                <input type="text" placeholder="Search" />
-                <img src={night} alt="" className="toggle-icon" />
-            </div>
-            <img src="" alt=""  />
+          
+          <div className="hidden md:flex space-x-6">
+            <Link to="/" className="text-black hover:text-red-500">Home</Link>
+            <Link to="/About" className="text-black hover:text-red-500">About</Link>
+            <Link to="/Services" className="text-black hover:text-red-500">Services</Link>
+            <Link to="/Contact" className="text-black hover:text-red-500">Contact</Link>
+            <Link to="/Form"><button className="hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-lg">
+              REGISTER NOW
+            </button></Link>
+          </div>
 
+          
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
+      </div>
 
-            
-    )
-}
+
+      {isOpen && (
+        <div className="md:hidden bg-red-300 shadow-md">
+          <Link to="/" className="block px-4 py-2 text-black hover:bg-gray-100">Home</Link>
+          <Link to="/About" className="block px-4 py-2 text-black hover:bg-gray-100">About</Link>
+          <Link to="/Services" className="block px-4 py-2 text-black hover:bg-gray-100">Services</Link>
+          <Link to="/Contact" className="block px-4 py-2 text-black hover:bg-gray-100">Contact</Link>
+        </div>
+      )}
+    </nav>
+  );
+};
+
 export default Navbar;
