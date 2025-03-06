@@ -5,6 +5,7 @@ import Home from './componets/Home';
 import About from './componets/About';
 import Services from './componets/Services'
 import Contacts from './componets/Contacts';
+import Form from './componets/Form';
 function App() {  
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
       <Route path='/About' element={<About/>}></Route>
       <Route path='/Services' element={<Services/>}></Route>
       <Route path='/Contacts' element={<Contacts/>}></Route>
+      <Route path='/Form' element={<Form/>}></Route>
 
       </Route>
     </Routes>
