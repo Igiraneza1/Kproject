@@ -37,19 +37,20 @@ const Footer = () => {
 
     
         <div className="text-right">
-          <h3 className="text-xl font-semibold">Get in touch</h3>
-          <div className="flex flex-col items-end mt-2">
+          
+          <div className="flex flex-row items-end mt-2 gap-5">
             <a href="#" className="text-blue-400">Quick link</a>
             <a href="#" className="hover:underline">HOME</a>
             <a href="#" className="hover:underline">ABOUT</a>
             <a href="#" className="hover:underline">SERVICES</a>
             <a href="#" className="hover:underline">CONTACT</a>
           </div>
-          <div className="flex flex-col items-end mt-4 space-y-3">
+          <div className="flex flex-row gap-8 pt-20 items-end mt-4 space-y-3">
+          <h3 className="text-xl font-semibold">Get in touch</h3>
             <FaEnvelope className="text-white text-2xl cursor-pointer" />
             <FaInstagram className="text-white text-2xl cursor-pointer" />
             <FaLinkedin className="text-white text-2xl cursor-pointer" />
-            <FaWhatsapp className="text-white text-2xl cursor-pointer" />
+            <FaWhatsapp className="text-white text-2xl cursor-pointer pb-10" />
           </div>
         </div>
       </div>

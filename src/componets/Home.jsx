@@ -4,7 +4,7 @@ import image2 from "../assets/image_6.jpg";
 import image3 from "../assets/image_7.jpg";
 import intro from "../assets/image_2.jpg"; 
 
-const App = () => {
+const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
 
   const cards = [
@@ -93,4 +93,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
