@@ -40,10 +40,10 @@ const Footer = () => {
           
           <div className="flex flex-row items-end mt-2 gap-5">
             <a href="#" className="text-blue-400">Quick link</a>
-            <a href="#" className="hover:underline">HOME</a>
-            <a href="#" className="hover:underline">ABOUT</a>
-            <a href="#" className="hover:underline">SERVICES</a>
-            <a href="#" className="hover:underline">CONTACT</a>
+            <a href="/" className="hover:underline">HOME</a>
+            <a href="About" className="hover:underline">ABOUT</a>
+            <a href="Services" className="hover:underline">SERVICES</a>
+            <a href="Contacts" className="hover:underline">CONTACTS</a>
           </div>
           <div className="flex flex-row gap-8 pt-20 items-end mt-4 space-y-3">
           <h3 className="text-xl font-semibold">Get in touch</h3>
