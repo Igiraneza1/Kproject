@@ -3,10 +3,14 @@ import image1 from "../assets/image_5.jpg";
 import image2 from "../assets/image_6.jpg";
 import image3 from "../assets/image_7.jpg";
 import intro from "../assets/image_2.jpg"; 
+import image0  from "../assets/image_1.jpg";
 
 const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
-
+  const [isBasicOpen, setIsBasicOpen] = useState(true);
+  const [isNeverDonateOpen, setIsNeverDonateOpen] = useState(false);
+  const [isWait, setIsWait] = useState(false);
+  const [isFemale, setIsFemale] = useState(false);
   const cards = [
     {
       title: "Start Your RapidPass",
@@ -49,8 +53,7 @@ const Home = () => {
             >
               READ MORE
             </button>
-          </div>
-          
+          </div>          
           {isContentVisible && (
             <div className="mt-4 text-lg text-gray-800">
               <p>
@@ -62,6 +65,7 @@ const Home = () => {
           )}
         </div>
 
+
       
         <div className="w-1/2">
           <img
@@ -72,8 +76,102 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
+                    style={{ backgroundImage: `url(${image0})`}}>
+
+      <div className="max-w-xl mx-auto mt-6 p-4 bg-white shadow-md rounded-lg backdrop-opacity-100">
+      <h2 className="text-2xl font-semibold">Criteria for blood donation</h2>
+      <p className="text-gray-700 mt-2">
+        Donating blood is voluntary and unpaid. Below are summarized eligibility criteria:
+      </p>
+
       
-      <div className="flex flex-wrap justify-center gap-3 p-6 pt-20">
+      <div className="mt-4 border rounded-lg">
+        <button
+          onClick={() => setIsBasicOpen(!isBasicOpen)}
+          className="w-full flex justify-between items-center p-3 bg-blue-300 text-white font-semibold rounded-t-lg"
+        >
+          <span>Basic</span>
+          <span>{isBasicOpen ? "➖" : "➕"}</span>
+        </button>
+        <div className={`overflow-hidden transition-all duration-300 ${isBasicOpen ? "max-h-40 p-3" : "max-h-0 p-0"} bg-gray-100 rounded-b-lg`}>
+          {isBasicOpen && (
+            <ul className="list-disc pl-5 text-gray-800">
+              <li>To be in good health at the time of donating blood</li>
+              <li>Age: 18-60 years</li>
+              <li>Weight: 50 kgs and above</li>
+            </ul>
+          )}
+        </div>
+      </div>
+
+      
+      <div className="mt-3 border rounded-lg">
+        <button
+          onClick={() => setIsNeverDonateOpen(!isNeverDonateOpen)}
+          className="w-full flex justify-between items-center p-3 bg-blue-300 text-white font-semibold rounded-t-lg"
+        >
+          <span>Never donate blood if</span>
+          <span>{isNeverDonateOpen ? "➖" : "➕"}</span>
+        </button>
+        <div className={`overflow-hidden transition-all duration-300 ${isNeverDonateOpen ? "max-h-40 p-3" : "max-h-0 p-0"} bg-gray-100 rounded-b-lg`}>
+          {isNeverDonateOpen && (
+            <ul className="list-disc  pl-5 text-gray-800">
+              <li>Have ever had a positive test for HIV (AIDS virus),</li>
+              <li>Have ever had a positive test for Hepatitis B orC,</li>
+              <li>Have ever injected recreational drugs,</li>
+              <li>You are homosexual persons.</li>
+            </ul>
+          )}
+        </div>
+      </div>
+
+      <div className="mt-3 border rounded-lg">
+        <button
+          onClick={() => setIsWait(!isWait)}
+          className="w-full flex justify-between items-center p-3 bg-blue-300 text-white font-semibold rounded-t-lg"
+        >
+          <span>Wait for 6 months if</span>
+          <span>{isWait ? "➖" : "➕"}</span>
+        </button>
+        <div className={`overflow-hidden transition-all duration-300 ${isWait ? "max-h-40 p-3" : "max-h-0 p-0"} bg-gray-100 rounded-b-lg`}>
+          {isWait && (
+            <p className="text-gray-700">
+              <li>If you have recently had a tattoo or body piercing you cannot donate for 6 months from the date of the procedure,</li>
+              <li>If you have visited the dentist for a minor or major procedure or any other surgical interventions,</li>
+              <li>you must wait 6 months to donate blood,</li> 
+              <li>You must not give blood If you engaged in “atrisk” sexual activity in the past 6 months.</li> 
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="mt-3 border rounded-lg">
+        <button
+          onClick={() => setIsFemale(!isFemale)}
+          className="w-full flex justify-between items-center p-3 bg-blue-300 text-white font-semibold rounded-t-lg"
+        >
+          <span>For female</span>
+          <span>{isFemale ? "➖" : "➕"}</span>
+        </button>
+        <div className={`overflow-hidden transition-all duration-300 ${isFemale ? "max-h-40 p-3" : "max-h-0 p-0"} bg-gray-100 rounded-b-lg`}>
+          {isFemale && (
+            <ul className="list-disc  pl-5 text-gray-800">
+              <li>Do not donate while you are in menstrual periods until 7 days after the last day of your periods,</li>
+              <li>Do not donate during the pregnancy,</li>
+              <li>While breast-feeding wait at least 9 months from the day of giving birth.</li>
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+    </div>
+
+    
+      
+
+      
+      <div className="flex flex-1/3 justify-center gap-3 p-6 pt-20">
         {cards.map((card, index) => (
           <div
             key={index}

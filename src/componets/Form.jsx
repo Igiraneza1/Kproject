@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import image11  from "../assets/image_11.jpg";
 
 const Form = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); 
@@ -24,27 +25,21 @@ const Form = () => {
         }}
       >
      
-        <div className="absolute inset-0 flex justify-center items-center text-white text-4xl font-bold">
-          <h1>Your donation can be a lifeline for someone in need!</h1>
+        <div className="flex flex-col absolute inset-0 text-center justify-center items-center text-black text-4xl font-bold mt-10"
+            style={{ backgroundImage: `url(${image11})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover"}}>
+            <h1>Your donation can be a lifeline for someone in need!</h1>
+            <h1 className="text-4xl pt-10 font-bold mb-4">Save Lives - Become a Blood Donor Today!</h1>
+            <p className="text-lg pt-10 mb-6">Your donation can save up to three lives. Register now to receive notifications about blood donation drives.</p>
+            <p className="text-sm pt-10">Just a few minutes of your time can make a huge difference. Let's work together to make the world a healthier place!</p>
         </div>
 
-       
-        <div className="min-h-screen bg-gradient-to-r from-pink-500 to-red-500 text-white">
-          <div className="container mx-auto px-6 py-12">
-            <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold mb-4">Save Lives - Become a Blood Donor Today!</h1>
-              <p className="text-lg mb-6">Your donation can save up to three lives. Register now to receive notifications about blood donation drives.</p>
-              <p className="text-sm">Just a few minutes of your time can make a huge difference. Let’s work together to make the world a healthier place!</p>
-            </div>
-          </div>
-        </div>
-
-      
+        
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
           <button
             onClick={openModal} 
-            className="bg-red-900 text-white px-6 py-2 rounded-lg font-bold shadow-lg hover:bg-red-500"
-          >
+            className="bg-red-900 text-white px-6 py-2 rounded-lg font-bold shadow-lg hover:bg-red-500">
             Register (Iyandikishe)
           </button>
         </div>
@@ -53,7 +48,7 @@ const Form = () => {
       
       {isModalOpen && (
         <div className="fixed inset-0 flex justify-center items-center z-50">
-          <div className="relative bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full">
+          <div className="relative bg-white shadow-red-400 p-8 rounded-lg shadow-xl max-w-2xl w-full">
             
             <button
               onClick={closeModal}
