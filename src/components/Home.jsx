@@ -7,7 +7,7 @@ import image0  from "../assets/image_1.jpg";
 
 const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
-  const [isBasicOpen, setIsBasicOpen] = useState(true);
+  const [isBasicOpen, setIsBasicOpen] = useState(false);
   const [isNeverDonateOpen, setIsNeverDonateOpen] = useState(false);
   const [isWait, setIsWait] = useState(false);
   const [isFemale, setIsFemale] = useState(false);
@@ -49,8 +49,7 @@ const Home = () => {
           <div className="mt-4 flex space-x-2">
             <button
               className="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-lg"
-              onClick={() => setIsContentVisible(!isContentVisible)}
-            >
+              onClick={() => setIsContentVisible(!isContentVisible)}>
               READ MORE
             </button>
           </div>          

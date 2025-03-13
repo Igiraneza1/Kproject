@@ -1,26 +1,53 @@
-import React from 'react'
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Layout from './componets/Layout';
-import Home from './componets/Home';
-import About from './componets/About';
-import Services from './componets/Services'
-import Contacts from './componets/Contacts';
-import Form from './componets/Form';
-function App() {  
-  return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/About' element={<About/>}></Route>
-      <Route path='/Services' element={<Services/>}></Route>
-      <Route path='/Contacts' element={<Contacts/>}></Route>
-      <Route path='/Form' element={<Form/>}></Route>
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-      </Route>
-    </Routes>
-    </BrowserRouter>
+// Import your components
+import Layout from './components/Layout';
+import Home from './components/Home';
+import About from './components/About';
+import Services from './components/Services';
+import Contacts from './components/Contacts';
+import Form from './components/Form';
+import Blogs from './components/Blogs';
+import Dashboardlayout from './components/Dashboard/Dashboardlayout';
+import Content from './components/Dashboard/Content';
+import Message from './components/Dashboard/Message';
+import Footer from "./components/Footer";
+
+const App = () => {
+  const [messages, setMessages] = useState([]);
+
+  const addMessage = (message) => {
+    setMessages([...messages, message]);
+  };
+
+  return (
+    <Router>
+      <Routes>
+        {/* Main Routes */}
+        <Route path="/" element={<Layout />}>
+          <Route path="/" index element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Contacts" element={<Contacts />} />
+          <Route path="/Form" element={<Form />} />
+          <Route path="/Blogs" element={<Blogs />} />
+        </Route>
+
+        {/* Dashboard Routes */}
+        <Route path="/dashboard" element={<Dashboardlayout />}>
+          <Route path="Content" index element={<Content />} />
+          <Route path="Message" element={<Message messages={messages} />} />
+        </Route>
+
+        {/* Footer with Message Form */}
+        <Route path="/footer" element={<Footer addMessage={addMessage} />} />
+
+        {/* Messages Page to display submitted messages */}
+        <Route path="/messages" element={<Message messages={messages} />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

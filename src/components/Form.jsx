@@ -12,7 +12,7 @@ const Form = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setIsSignIn(false); // 
+    setIsSignIn(false);
   };
 
   return (
@@ -171,14 +171,13 @@ const Form = () => {
                   </p>
                 </div>
 
-                {/* Switch to Sign In */}
+                
                 <div className="mt-6 flex justify-between items-center">
                   <p className="text-gray-600 text-sm">
                     Already have an account?{" "}
                     <span
                       className="font-bold cursor-pointer text-black"
-                      onClick={() => setIsSignIn(true)}
-                    >
+                      onClick={() => setIsSignIn(true)}>
                       Sign In (Injira)
                     </span>
                   </p>
