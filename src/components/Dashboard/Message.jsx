@@ -21,6 +21,7 @@ const Message = ({ messages }) => {
                 <td className="p-2">{msg.name}</td>
                 <td className="p-2">{msg.message}</td>
                 <td className="p-2">{msg.date}</td>
+  
               </tr>
             ))}
           </tbody>

@@ -4,7 +4,7 @@ import image2 from "../assets/image_6.jpg";
 import image3 from "../assets/image_7.jpg";
 import intro from "../assets/image_2.jpg"; 
 import image0  from "../assets/image_1.jpg";
-import welcome from "../assets/image_13.webp";
+
 
 const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -61,12 +61,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-
-
-
-
-
-      
+ 
       <div className="flex items-center justify-between h-142 px-6 sm:px-10 pt-15">
         <div className="max-w-lg">
           <h1 className="text-3xl font-bold mb-2">

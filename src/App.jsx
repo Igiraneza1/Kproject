@@ -13,6 +13,7 @@ import Dashboardlayout from './components/Dashboard/Dashboardlayout';
 import Content from './components/Dashboard/Content';
 import Message from './components/Dashboard/Message';
 import Footer from "./components/Footer";
+import Registered from "./components/Dashboard/Registered";
 
 const App = () => {
   const [messages, setMessages] = useState([]);
@@ -38,10 +39,12 @@ const App = () => {
         <Route path="/" element={<Dashboardlayout />}>
           <Route path="Content" index element={<Content />} />
           <Route path="Message" element={<Message messages={messages} />} />
+          <Route path="/Registered" element={<Registered />} />
         </Route>
 
         <Route path="/footer" element={<Footer addMessage={addMessage} />} />
         <Route path="/messages" element={<Message messages={messages} />} />
+        
       </Routes>
     </Router>
   );
