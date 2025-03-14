@@ -2,15 +2,16 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-function Layout() {
+const Layout = ({addMessage})=> {
     
   return (
     <div>
       <Navbar />
+
       
-        <Outlet />
+      <Outlet />
       
-      <Footer />
+      <Footer addMessage = {addMessage}/>
     </div>
   );
 }

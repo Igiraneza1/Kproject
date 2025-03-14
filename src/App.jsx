@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import your components
+
 import Layout from './components/Layout';
 import Home from './components/Home';
 import About from './components/About';
@@ -23,9 +23,11 @@ const App = () => {
 
   return (
     <Router>
+      
       <Routes>
-        {/* Main Routes */}
+      
         <Route path="/" element={<Layout />}>
+
           <Route path="/" index element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Services" element={<Services />} />
@@ -33,17 +35,12 @@ const App = () => {
           <Route path="/Form" element={<Form />} />
           <Route path="/Blogs" element={<Blogs />} />
         </Route>
-
-        {/* Dashboard Routes */}
-        <Route path="/dashboard" element={<Dashboardlayout />}>
+        <Route path="/" element={<Dashboardlayout />}>
           <Route path="Content" index element={<Content />} />
           <Route path="Message" element={<Message messages={messages} />} />
         </Route>
 
-        {/* Footer with Message Form */}
         <Route path="/footer" element={<Footer addMessage={addMessage} />} />
-
-        {/* Messages Page to display submitted messages */}
         <Route path="/messages" element={<Message messages={messages} />} />
       </Routes>
     </Router>
@@ -51,3 +48,4 @@ const App = () => {
 };
 
 export default App;
+

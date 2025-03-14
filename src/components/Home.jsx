@@ -4,6 +4,7 @@ import image2 from "../assets/image_6.jpg";
 import image3 from "../assets/image_7.jpg";
 import intro from "../assets/image_2.jpg"; 
 import image0  from "../assets/image_1.jpg";
+import welcome from "../assets/image_13.webp";
 
 const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -36,6 +37,35 @@ const Home = () => {
 
   return (
     <div>
+
+
+    <div className="flex items-center min-h-screen">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center p-8">
+        <div className="lg:w-1/2 text-center lg:text-left">
+          <div className="flex items-center justify-center lg:justify-start mb-4">
+            <img src="src/assets/logo.jpg" alt="" className="w-50 h-50 mr-2" />
+          </div>
+          <h2 className="text-black text-2xl font-bold mb-10">Give Blood, Give Hope!</h2>
+          <h1 className="text-black text-2xl  mb-6">
+          Thank you for visiting our site. By donating blood, you're helping save lives and make a real difference in your community. 
+          Join us today and become a lifesaver!
+          </h1>
+        </div>
+        <div className="lg:w-1/2 relative overflow-hidden rounded-xl ml-4">
+          <div className="absolute top-0 left-0 w-full h-full bg-blue-200 opacity-20 rounded-xl" /> 
+          <img
+            src="src/assets/image_13.webp" 
+            alt=""
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
+
+
+
+
+
       
       <div className="flex items-center justify-between h-142 px-6 sm:px-10 pt-15">
         <div className="max-w-lg">

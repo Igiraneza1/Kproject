@@ -3,15 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { FaEnvelope, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Footer = ({ addMessage }) => {
-  const [formData, setFormData] = useState({ email: "", name: "", message: "" });
+  const [formData, setFormData] = useState({ 
+    email: "", 
+    name: "", 
+    message: "" });
   const history = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (go) => {
-    go.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addMessage(formData);
     if (!formData.email || !formData.name || !formData.message) return;
 
     const newMessage = {
@@ -20,8 +24,6 @@ const Footer = ({ addMessage }) => {
       message: formData.message,
       date: new Date().toISOString().split("T")[0], // Current date
     };
-
-    // Add the message to the list
     addMessage(newMessage);
     setFormData({ 
       email: "", 
@@ -29,7 +31,7 @@ const Footer = ({ addMessage }) => {
       message: ""
      });
 
-    // Redirect to messages page
+   
     history.push("/messages");
   };
 
@@ -72,7 +74,7 @@ const Footer = ({ addMessage }) => {
             />
             <textarea
               name="message"
-              placeholder="Message"
+              placeholder="Leave your message"
               value={formData.message}
               onChange={handleChange}
               className="w-full p-2 border rounded-md"
@@ -102,6 +104,7 @@ const Footer = ({ addMessage }) => {
         </div>
       </div>
 
+      
       <div className="text-center text-sm mt-6">
         &copy; 2025 All rights reserved by Blood Donation
       </div>
