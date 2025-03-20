@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import image1 from "../assets/image_5.jpg";
 import image2 from "../assets/image_6.jpg";
 import image3 from "../assets/image_7.jpg";
 import intro from "../assets/image_2.jpg"; 
 import image0  from "../assets/image_1.jpg";
+
+
 
 
 const Home = () => {
@@ -36,33 +39,69 @@ const Home = () => {
   ];
 
   return (
-    <div>
+  
+    <>
 
 
-    <div className="flex items-center min-h-screen">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center p-8">
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <div className="flex items-center justify-center lg:justify-start mb-4">
-            <img src="src/assets/logo.jpg" alt="" className="w-50 h-50 mr-2" />
-          </div>
-          <h2 className="text-black text-2xl font-bold mb-10">Give Blood, Give Hope!</h2>
-          <h1 className="text-black text-2xl  mb-6">
-          Thank you for visiting our site. By donating blood, you're helping save lives and make a real difference in your community. 
-          Join us today and become a lifesaver!
-          </h1>
-        </div>
-        <div className="lg:w-1/2 relative overflow-hidden rounded-xl ml-4">
-          <div className="absolute top-0 left-0 w-full h-full bg-blue-200 opacity-20 rounded-xl" /> 
-          <img
-            src="src/assets/image_13.webp" 
-            alt=""
-            className="object-cover w-full h-full"
-          />
-        </div>
+    <div className="relative flex flex-col items-center justify-center min-h-screen p-20">
+      {/* Image Section */}
+      <div className="relative w-full max-w-3xl">
+        <img
+          src="src/assets/image_17.jpg" // Replace with your image URL
+          alt="Woman using laptop"
+          className="w-1000 rounded-lg"
+        />
+      </div>
+
+      <div className="relative -mt-12 bg-white shadow-lg rounded-lg w-full max-w-3xl text-center">
+        <h2 className="text-2xl font-bold mt-2">Give Blood<br/>Give Life</h2>
+        <p className="text-dm leading-relaxed">
+        Today, the need for blood is greater than ever. Every 2 seconds, someone needs blood a child fighting leukemia, a mother in surgery, or an accident victim struggling to survive.
+        With just one donation, you can save up to three lives. Your kindness gives patients a second chance, families more time together, and communities a healthier future.
+        There is no substitute for human blood it only comes from generous people like you.
+        <Link to="/Form"  className="hover:text-red-600 text-black font-semibold px-4 py-2 rounded-lg">
+              JOIN US
+            </Link> in saving lives. Whether it's your first time donating or you've done it before, your help truly matters.
+        </p>
       </div>
     </div>
  
-      <div className="flex items-center justify-between h-142 px-6 sm:px-10 pt-15">
+
+
+
+    <div>
+
+      <div className="flex items-center min-h-screen bg-white">
+     <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center p-8 gap-10">
+      <div className="lg:w-1/2 text-center lg:text-left  p-8 rounded-xl shadow-lg shadow-black">
+      <div className="flex items-center justify-center lg:justify-start mb-4">
+        <img
+          src="src/assets/logo.jpg"
+          alt="Logo"
+          className="w-full"
+        />
+      </div>
+
+      <h2 className="text-black text-2xl font-bold mb-10">Your Donation Matters</h2>
+      <h1 className="text-black text-lg mb-6">
+      
+       When you donate blood, you’re giving someone a second chance at life. Your simple act of kindness can help a child, a mother, or a person in need of a life-saving treatment. 
+       Blood is needed every day, and there’s no substitute for it only generous donors like you can make a difference.
+      </h1>
+    </div>
+
+    <div className="lg:w-1/2 relative overflow-hidden rounded-xl ml-4 bg-white shadow-lg shadow-black">
+      <div className="absolute top-0 left-0 w-full h-full bg-blue-200 opacity-20 rounded-xl" />
+      <img
+        src="src/assets/image_13.webp"
+        alt="Blood Donation"
+        className="object-cover  rounded-xl h-120 w-100"
+      />
+    </div>
+  </div>
+</div>
+
+<div className="flex items-center justify-between h-142 px-6 sm:px-10 pt-15 rounded-b-2xl">
         <div className="max-w-lg">
           <h1 className="text-3xl font-bold mb-2">
             Ensuring a Steady and Life-Saving Supply
@@ -88,8 +127,6 @@ const Home = () => {
             </div>
           )}
         </div>
-
-
       
         <div className="w-1/2">
           <img
@@ -99,6 +136,7 @@ const Home = () => {
           />
         </div>
       </div>
+
 
       <div className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
                     style={{ backgroundImage: `url(${image0})`}}>
@@ -193,8 +231,6 @@ const Home = () => {
 
     
       
-
-      
       <div className="flex flex-1/3 justify-center gap-3 p-6 pt-20">
         {cards.map((card, index) => (
           <div
@@ -212,6 +248,7 @@ const Home = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

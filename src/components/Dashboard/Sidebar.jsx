@@ -12,7 +12,7 @@ const Sidebar = () => {
 
       <ul className="space-y-4 flex-grow">
         <li>
-          <Link to="/Dashboard" className="flex items-center space-x-2 hover:bg-red-700 p-2 rounded-md">
+          <Link to="/Dahome" className="flex items-center space-x-2 hover:bg-red-700 p-2 rounded-md">
             <MdDashboard className="text-xl" />
             <span>Dashboard</span>
           </Link>

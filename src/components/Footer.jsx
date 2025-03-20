@@ -104,7 +104,6 @@ const Footer = ({ addMessage }) => {
         </div>
       </div>
 
-      
       <div className="text-center text-sm mt-6">
         &copy; 2025 All rights reserved by Blood Donation
       </div>

@@ -11,12 +11,11 @@ const Form = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setIsAccountCreated(false); // Reset after closing modal
+    setIsAccountCreated(false); 
   };
 
   const handleAccountCreation = () => {
-    setIsAccountCreated(true); // Set the account creation status to true
-    // You can also perform additional actions, such as sending data to a server or saving the form
+    setIsAccountCreated(true); 
   };
 
   return (
