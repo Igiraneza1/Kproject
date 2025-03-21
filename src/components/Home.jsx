@@ -5,6 +5,9 @@ import image2 from "../assets/image_6.jpg";
 import image3 from "../assets/image_7.jpg";
 import intro from "../assets/image_2.jpg"; 
 import image0  from "../assets/image_1.jpg";
+import image17 from '../assets/image_17.jpg'
+import image13 from "../assets/image_13.webp";
+import logo from "../assets/logo.jpg"
 
 
 
@@ -37,6 +40,7 @@ const Home = () => {
       imageUrl: image3,
     },
   ];
+  
 
   return (
   
@@ -46,9 +50,8 @@ const Home = () => {
     <div className="relative flex flex-col items-center justify-center min-h-screen p-20">
       {/* Image Section */}
       <div className="relative w-full max-w-3xl">
-        <img
-          src="src/assets/image_17.jpg" // Replace with your image URL
-          alt="Woman using laptop"
+        
+        <img src={image17} alt="..."
           className="w-1000 rounded-lg"
         />
       </div>
@@ -75,10 +78,8 @@ const Home = () => {
      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center p-8 gap-10">
       <div className="lg:w-1/2 text-center lg:text-left  p-8 rounded-xl shadow-lg shadow-black">
       <div className="flex items-center justify-center lg:justify-start mb-4">
-        <img
-          src="src/assets/logo.jpg"
-          alt="Logo"
-          className="w-full"
+      <img src={logo} alt="..."
+          className="w-30 h-30 rounded-lg"
         />
       </div>
 
@@ -92,11 +93,9 @@ const Home = () => {
 
     <div className="lg:w-1/2 relative overflow-hidden rounded-xl ml-4 bg-white shadow-lg shadow-black">
       <div className="absolute top-0 left-0 w-full h-full bg-blue-200 opacity-20 rounded-xl" />
-      <img
-        src="src/assets/image_13.webp"
-        alt="Blood Donation"
-        className="object-cover  rounded-xl h-120 w-100"
-      />
+      <img src={image13} alt="..."
+          className="w-100 h-120 rounded-lg"
+        />
     </div>
   </div>
 </div>
