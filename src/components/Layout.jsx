@@ -7,10 +7,7 @@ const Layout = ({addMessage})=> {
   return (
     <div>
       <Navbar />
-
-      
       <Outlet />
-      
       <Footer addMessage = {addMessage}/>
     </div>
   );

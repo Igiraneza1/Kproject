@@ -14,7 +14,6 @@ import Content from './components/Dashboard/Content';
 import Message from './components/Dashboard/Message';
 import Footer from "./components/Footer";
 import Registered from "./components/Dashboard/Registered";
-import { Star } from "lucide-react";
 import Start from "./components/Start";
 
 const App = () => {
@@ -26,10 +25,12 @@ const App = () => {
 
   return (
     <Router>
-      
       <Routes>
-      <Route path="/Start" index element={<Start />} />
+        
+        
+        
         <Route path="/" element={<Layout />}>
+          <Route path="/Start" index element={<Start />} />
           <Route path="/"  element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Services" element={<Services />} />
