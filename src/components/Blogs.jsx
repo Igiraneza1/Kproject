@@ -100,9 +100,7 @@ export default function BloodDonationBlog() {
       <section className="bg-red-900 text-white text-center py-12">
         <h2 className="text-3xl font-semibold">Be a Hero Today!</h2>
         <p className="mt-4 text-lg">Your donation can give someone a second chance at life.</p>
-        <button className="mt-6 bg-white text-red-500 hover:bg-red-200 px-6 py-2 rounded-lg">
-          Find a Donation Center
-        </button>
+        
       </section>
     </div>
   );

@@ -41,20 +41,25 @@ const Home = () => {
     },
   ];
   
-
   return (
   
     <>
+ <h1
+  className="text-8xl md:text-8xl font-extrabold uppercase text-transparent bg-clip-text bg-center bg-cover mt-20"
+  style={{
+    backgroundImage: `url(${image17})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
+  Blood Donation
+</h1>
 
 
     <div className="relative flex flex-col items-center justify-center min-h-screen p-20">
-      {/* Image Section */}
-      <div className="relative w-full max-w-3xl">
-        
-        <img src={image17} alt="..."
-          className="w-1000 rounded-lg"
-        />
-      </div>
+      
 
       <div className="relative -mt-12 bg-white shadow-lg rounded-lg w-full max-w-3xl text-center">
         <h2 className="text-2xl font-bold mt-2">Give Blood<br/>Give Life</h2>
