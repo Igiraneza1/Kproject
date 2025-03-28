@@ -43,7 +43,7 @@ const Form = () => {
 
       {isModalOpen && !isAccountCreated && (
         <div className="fixed inset-0 flex justify-center items-center z-50">
-          <div className="relative bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full">
+          <div className="relative bg-gray-200 p-8 rounded-lg shadow-xl max-w-2xl w-full">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-lg">
