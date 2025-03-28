@@ -14,6 +14,8 @@ import Content from './components/Dashboard/Content';
 import Message from './components/Dashboard/Message';
 import Footer from "./components/Footer";
 import Registered from "./components/Dashboard/Registered";
+import { Star } from "lucide-react";
+import Start from "./components/Start";
 
 const App = () => {
   const [messages, setMessages] = useState([]);
@@ -26,10 +28,9 @@ const App = () => {
     <Router>
       
       <Routes>
-      
+      <Route path="/Start" index element={<Start />} />
         <Route path="/" element={<Layout />}>
-
-          <Route path="/" index element={<Home />} />
+          <Route path="/"  element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Services" element={<Services />} />
           <Route path="/Contacts" element={<Contacts />} />
