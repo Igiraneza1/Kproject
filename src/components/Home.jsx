@@ -44,11 +44,14 @@ const Home = () => {
   return (
   
     <>
- <h1
-  className="text-8xl md:text-8xl font-extrabold uppercase text-transparent bg-clip-text bg-center bg-cover mt-20"
+<div className="bg-red-800">
+    <div className="text-center">
+    <h1
+  className="text-8xl md:text-8xl font-extrabold uppercase text-transparent bg-clip-text bg-center bg-cover pt-30"
   style={{
     backgroundImage: `url(${image17})`,
-    backgroundSize: "cover",
+    backgroundSize: "10% 100%",
+    // backgroundSize: "cover",
     backgroundPosition: "center",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
@@ -57,6 +60,7 @@ const Home = () => {
   Blood Donation
 </h1>
 
+    </div>
 
     <div className="relative flex flex-col items-center justify-center min-h-screen p-20">
       
@@ -73,10 +77,8 @@ const Home = () => {
         </p>
       </div>
     </div>
+    </div>
  
-
-
-
     <div>
 
       <div className="flex items-center min-h-screen bg-white">
